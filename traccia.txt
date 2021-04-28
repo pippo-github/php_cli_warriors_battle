@@ -1,0 +1,102 @@
+time to upload
+
+Panoramica
+Crea un'applicazione PHP a riga di comando che simula una battaglia tra due combattenti.
+
+Proprietà
+
+Ogni combattente ha le seguenti proprietà:
+
+Proprietà Descrizione dell'utilizzo Tipo di valore
+
+Nome Nome della stringa combattente, 30 caratteri o meno
+
+Salute Quantità di salute rimanente Numero intero, da 0 a 100
+
+Forza Danni inflitti all'attacco Numero intero, da 0 a 100
+
+Difesa Riduzione del danno durante la difesa da un attacco Numero intero, da 0 a 100
+
+Velocità Determina l'ordine di attacco Numero intero, da 0 a 100
+
+Fortuna Influisce sulla capacità di schivare un attacco Decimale, da 0 a 1
+
+
+Tipi combattenti
+Esistono 3 tipi di combattente: spadaccino, bruto e grappler. Ogni tipo ha dei punti di forza
+e debolezze. All'inizio di una battaglia, quando vengono creati i combattenti, ogni proprietà deve
+essere determinato in modo casuale tra i valori massimi e minimi consentiti per questo
+
+Type  			Health  	Strength  		Defence   	Speed  		Luck 
+Swordsman  		40L60		60 - 70			20 - 30  	90 - 100  	0.3 - 0.5 
+Brute  			90 - 100	65 - 75			40 - 50		40 - 65		0.3 - 0.35 
+Grappler  		60 - 100  	75 - 80			35 - 40		60 - 80		0.3 - 04 
+
+
+
+Flusso di battaglia / gioco
+
+Il programma viene eseguito sulla riga di comando. Quando il programma si avvia, richiede i nomi di
+due combattenti e assegna loro un tipo di combattente a caso. Le proprietà sono quindi
+determinato casualmente per ogni combattente come sopra.
+
+
+Il programma esegue la simulazione di battaglia e produce una riga di testo ogni turno che spiega cosa
+è successo quel round fino a quando uno non si esaurisce la salute o 30 turni passano senza un vincitore
+essere dichiarato.
+
+La velocità dei combattenti determina quale attaccherà per primo, se lo hanno due combattenti
+la stessa velocità dovrebbe andare per prima quella con la difesa più bassa. I combattenti quindi attaccano
+uno alla volta fino alla fine della battaglia. Il danno inflitto dall'attaccante è determinato
+con il seguente calcolo:
+
+Damage = Attacker strength 	- Defend ers  defence
+
+
+Il danno viene sottratto dalla salute dei difensori. Se la salute di un combattente scende a 0, lui
+perdere la battaglia. Se il combattimento non è terminato dopo 30 round, viene dichiarato un pareggio.
+Ogni volta che un difensore viene attaccato c'è una piccola possibilità che l'attaccante perda. La possibilità di
+un attacco mancante è indicato dalla proprietà fortuna dei difensori.
+
+
+Abilità speciali
+Ogni tipo di combattente ha un'abilità speciale:
+
+Spadaccino - Lucky Strike
+Con ogni attacco c'è una probabilità del 5% che la loro forza raddoppi per quell'attacco.
+
+Bruto - Colpo sbalorditivo
+Con ogni attacco c'è una probabilità del 2% di stordire il nemico, facendogli perdere il suo
+prossimo attacco.
+
+Grappler - Contrattacco
+Quando un grappler sfugge a un attacco, il suo avversario subisce 10 danni.
+
+Quando una battaglia finisce, il programma dovrebbe dichiarare il vincitore per nome o annunciare il file
+risultato come un pareggio.
+
+
+Regole
+
+Vorremmo vedere l'app che gira sulla riga di comando su un'installazione vanilla di
+PHP 5.6 o 7. Non ci sono restrizioni rigide riguardo alle prestazioni, agli standard del codice o al tempo
+tuttavia, ciascuno di essi è importante. Considera quanto segue prima di inviare la tua soluzione:
+
+
+Hai verificato la presenza di bug nel sistema? Hai testato il codice?
+• Il tuo codice è coerente, hai seguito uno standard di codifica? 
+• Il codice è di facile manutenzione? Quanto sarebbe facile introdurre un nuovo tipo di combattente?
+• E se volessimo aggiungere un combattente con due abilità, sarebbe possibile? (per
+esempio Grappling Swordsman with a lucky st rike and counter attack) 
+• Il codice è disaccoppiato e riutilizzabile? Sarebbe possibile costruire un utente grafico
+l'interfaccia sopra il tuo codice più tardi?
+
+
+Sebbene questa sfida non sia un probabile progetto del mondo reale, ha tutti gli stessi problemi
+sperimenterai in natura. Cerchiamo soluzioni che dimostrino la consapevolezza del meglio
+pratiche nell'ambito dello sviluppo di software PHP. Preferiamo la semplicità all'intelligenza, all'esplicita
+sulla magia e la manutenibilità sulla velocità
+
+
+Soprattutto, però, questa è un'opportunità per scrivere un codice creativo e divertirsi.
+Spero ti sia piaciuto!
