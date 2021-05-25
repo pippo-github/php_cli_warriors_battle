@@ -61,7 +61,7 @@ Grappler  		60 - 100  	75 - 80			35 - 40		60 - 80		0.3 - 04
     è successo quel round fino a quando uno non si esaurisce la salute o 30 turni passano senza un vincitore
     essere dichiarato.
 
-    La velocità dei combattenti determina quale attaccherà per primo, se lo hanno due combattenti
+    La velocità dei combattenti determina quale attaccherà per primo, se combattenti hanno
     la stessa velocità dovrebbe andare per prima quella con la difesa più bassa. I combattenti quindi attaccano
     uno alla volta fino alla fine della battaglia. Il danno inflitto dall'attaccante è determinato
     con il seguente calcolo:
